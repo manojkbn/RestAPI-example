@@ -4,7 +4,7 @@ from .serializers import ItemSerializer
 from base.models import Item
 
 @api_view(['GET'])
-def getData(request):
+def getData(request1):
     items = Item.objects.all()
     serializer = ItemSerializer(items,many=True )
     return Response(serializer.data)
